@@ -4,15 +4,19 @@
     "description": "Node API Challenge",
     "main": "index.js",
     "scripts": {
-        "db:seed": "knex seed:run"
+        "db:seed": "knex seed:run",
+        "server": "nodemon index.js"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/LambdaSchool/node-api-challenge.git"
     },
     "keywords": [
+        "node",
+        "express",
+        "blog",
         "api",
-        "node"
+        "middleware"
     ],
     "author": "Lambda School",
     "bugs": {
@@ -20,11 +24,17 @@
     },
     "homepage": "https://github.com/LambdaSchool/node-api-challenge#readme",
     "dependencies": {
+        "express": "^4.17.1",
         "helmet": "^3.21.2",
         "knex": "^0.20.8",
+        "mssql": "^5.1.0",
+        "mysql": "^2.17.1",
+        "mysql2": "^2.1.0",
+        "pg": "^7.17.1",
         "sqlite3": "^4.1.1"
     },
     "devDependencies": {
-        "knex-cleaner": "^1.3.0"
+        "knex-cleaner": "^1.3.0",
+        "nodemon": "^2.0.1"
     }
 }
