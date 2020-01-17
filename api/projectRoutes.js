@@ -89,5 +89,17 @@ router.delete('/:id', validateProjectId, (req, res) => {
     })
 })
 
+//GET all actions for project via project id
+
+
+router.get('/:id/actions', validateProjectId, (req, res) => {
+    data.getProjectActions(req.project.id)
+    .then(response => {
+        res.status(200).json(response);
+    }).catch(error => {
+        res.status(500).json({message: `Failed to get actions for project with id ${req.project.id}`})
+    })
+})
+
 
 module.exports = router;
